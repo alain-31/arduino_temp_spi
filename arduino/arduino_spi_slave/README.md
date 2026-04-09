@@ -1,4 +1,4 @@
-# Arduino Firmware — DHT11 SPI Slave
+# Arduino Firmware — temp SPI Slave
 
 ## Overview
 
@@ -6,7 +6,7 @@ This Arduino firmware acts as an SPI slave for an STM32 master.
 
 It performs:
 
-* Temperature and humidity acquisition using a DHT11 sensor
+* Temperature acquisition using a temp sensor
 * Local display on a 16x2 LCD (LCD1602)
 * Data exchange with the STM32 over SPI
 
@@ -15,7 +15,7 @@ It performs:
 ## Hardware
 
 * Arduino Uno (or compatible)
-* DHT11 sensor
+* MPU6050 temperature sensor
 * LCD1602 (16x2 character display)
 * SPI connection to STM32
 
@@ -23,7 +23,7 @@ It performs:
 
 ## Features
 
-* Reads temperature and humidity from DHT11
+* Reads temperature from sensor
 * Displays values on LCD1602
 * Responds to SPI requests from STM32
 * Can echo or send structured sensor data
@@ -35,7 +35,7 @@ It performs:
 1. Open:
 
    ```
-   arduino/dht11_spi_slave/dht11_spi_slave.ino
+   arduino/arduino_spi_slave/arduino_spi_slave.ino
    ```
 
 2. Select board:
@@ -44,23 +44,27 @@ It performs:
    Arduino Uno
    ```
 
-3. Select correct serial port
+3. Select correct serial port 
+
+   example: 
+
+   ```
+   /dev/ttyACM0
+   ```
 
 ---
 
 ## Required Libraries
 
 Install via Library Manager:
-
-* DHT sensor library (Adafruit)
-* Adafruit Unified Sensor
+* MPU6050 (Jeff Rowberg)
 * LiquidCrystal (usually built-in)
 
 ---
 
 ## Wiring (example)
 
-### DHT11
+### temp
 
 * VCC → 5V
 * GND → GND
@@ -86,13 +90,6 @@ Install via Library Manager:
 
 * Arduino is configured as SPI slave
 * STM32 is the SPI master
-* Communication protocol is defined in the firmware (to be extended)
+* Communication protocol is defined in the firmware
 
 ---
-
-## Future Improvements
-
-* Define structured SPI protocol (commands + responses)
-* Add checksum or simple framing
-* Improve LCD refresh strategy
-* Replace DHT11 with DHT22 (better accuracy)

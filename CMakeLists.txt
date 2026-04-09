@@ -8,7 +8,7 @@ set(CMAKE_ASM_COMPILER arm-none-eabi-gcc)
 
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
-project(timer_interrupt_blinky C ASM)
+project(arduino_temp_spi C ASM)
 
 set(CMAKE_OBJCOPY arm-none-eabi-objcopy)
 set(CMAKE_SIZE arm-none-eabi-size)

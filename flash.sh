@@ -3,7 +3,7 @@
 set -e
 
 BUILD_DIR=build
-TARGET=timer_interrupt_blinky.elf
+TARGET=arduino_temp_spi.elf
 ELF_PATH="$BUILD_DIR/$TARGET"
 
 if [ ! -f "$ELF_PATH" ]; then
