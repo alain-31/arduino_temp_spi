@@ -144,7 +144,7 @@ It demonstrates a **real embedded system workflow**:
 - debugging at the register level
 - solving real-world hardware issues (grounding, pin conflicts, signal integrity)
 
-It also highlights an important engineering mindset:
+It also highlights a common reliability problem:
 
 > The initial design used a DHT11 sensor, but due to unreliable behavior, it was replaced by an MPU6050, leading to a more robust and feature-rich system.
 
