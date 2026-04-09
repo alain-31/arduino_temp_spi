@@ -116,7 +116,7 @@ PB10 → LED → R → GND
 ---
 
 ## Project structure
-
+```
 .
 └── 02_arduino_temp_spi
     ├── build.sh
@@ -129,7 +129,7 @@ PB10 → LED → R → GND
     ├── README.md
     ├── run.sh
     └── Startup/
-
+```
 ---
 
 ## Why this project matters
