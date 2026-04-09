@@ -149,10 +149,3 @@ It also highlights an important engineering mindset:
 > The initial design used a DHT11 sensor, but due to unreliable behavior, it was replaced by an MPU6050, leading to a more robust and feature-rich system.
 
 ---
-
-## Possible improvements
-
-- Add checksum / protocol framing to SPI
-- Implement filtering and calibration on STM32
-- Replace Arduino with full STM32 sensor acquisition
-- Add UART logging for real-time monitoring
