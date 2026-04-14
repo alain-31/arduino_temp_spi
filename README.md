@@ -35,7 +35,7 @@ This project demonstrates **SPI communication in bare-metal C on STM32**.
 ---
 
 ### SPI connections
-```
+
 STM32 (3.3V)                Arduino (5V)
 --------------------------------------------
 PA5  (SCK)   ----------->   D13 (SCK)
@@ -47,19 +47,16 @@ PA4  (CS)    ----------->   D10 (SS)
 
 GND          -------------- GND   (mandatory)
 
-```
 ---
 
 ### Voltage divider (MISO protection)
 
-```
 Arduino D12 ---- R1 ----+----> STM32 PA6
                         |
                         R2
                         |
                        GND
 
-```
 Typical values:
 - R1 = 1kΩ
 - R2 = 2kΩ
@@ -68,7 +65,6 @@ Typical values:
 
 ### I2C (Arduino → MPU6050)
 
-```
 Arduino         MPU6050
 ------------------------
 A4 (SDA)  ----> SDA
@@ -76,49 +72,38 @@ A5 (SCL)  ----> SCL
 5V         ----> VCC
 GND        ----> GND
 
-```
 ---
 
 ### STM32 LEDs
 
-```
 PB0  → LED → R → GND
 PB1  → LED → R → GND
 PB10 → LED → R → GND
 
-```
 ---
 
 ## Build
 
-```
 ./build.sh
 
-```
 ---
 
 ## Rebuild
 
-```
 ./build.sh rebuild
 
-```
 ---
 
 ## Flash
 
-```
 ./flash.sh
 
-```
 ---
 
 ## Run (build + flash)
 
-```
 ./run.sh
 
-```
 ---
 
 ## Requirements
